@@ -10,9 +10,6 @@ df = pd.read_csv(file_path, header=None)
 # Display the first few rows of the DataFrame
 print(df.head())
 
-df.duplicated().sum() # -> 32020 duplicated rows
-df.drop_duplicates(inplace = True)
-
 missing_values = df.isnull().sum()
 print("Missing values before handling:")
 print(missing_values)
