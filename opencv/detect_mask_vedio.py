@@ -14,7 +14,7 @@ def detect_and_predict_mask(frame, face_net, mask_net):
     detection = face_net.forward()
     print(detection.shape)
 
-    # initialize tge list of faces, their corresponding locations, and the list of predictions from our face mask
+    # initialize the list of faces, their corresponding locations, and the list of predictions from our face mask
     # network
     faces = []
     location = []
@@ -99,5 +99,5 @@ while True:
         break
 
 # do a bit of cleanup
-cv2.destroyAllWindows()
-# video_stream.stop()
+video_stream.release()
+cv2.destroyWindow("Frame")
